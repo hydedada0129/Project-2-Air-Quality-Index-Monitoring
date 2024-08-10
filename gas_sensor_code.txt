@@ -1,0 +1,16 @@
+#include "MQ135.h"
+int sensorValue;
+int digitalValue;
+
+void setup(){
+ Serial.begin(9600) //sets the setial port to 9600
+ pinMode(0, input)  //pin 0 as an input
+}
+
+void loop(){
+  sensorValue = analogRead(0);  //read analog input pin 0
+  digitalValue = digitalRead(0);
+  Serial.println(sensorValue, DEC);  //DEC: decimal format
+  Serial.println(digitalValue, DEC);
+  delay(2000); //wait 2000 milliseconds(2 seconds) for next reading
+}
