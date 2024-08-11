@@ -1,14 +1,14 @@
 #include "MQ135.h"
 #include <ESP8266WiFi.h>
 
-String apiKey = "";  //this key from ThingSpeak "Write API key"
+String apiKey = "EHFRJYYWLCZ265OY";  //this key from ThingSpeak "Write API key"
 WiFiClient client;
 
 int sensorValue;
 int digitalValue;
 
-const char* ssid = "";
-const char* password = "";
+const char* ssid = "newapartner_newchild_2.4G";
+const char* password = "52822689";
 const char* server = "api.thingspeak.com";
 
 void setup() {
@@ -45,7 +45,7 @@ void loop() {
     String postStr = apiKey;
     postStr += "&field1=";    //concatenate the string &field1= to the postStr
     postStr += String(air_quality); //concatenate PPM
-    postStr += "r\n";
+    postStr += "\n";
 
     //WiFiclient.print() is used to send data over a network connection
     client.print("POST /update HTTP/1.1\n");      //where data should be sent
@@ -63,7 +63,7 @@ void loop() {
   client.stop();
   Serial.println("Waiting...");
 
-  delay(600000);     //For free ThingSpeak accounts, 
+  delay(15000);     //For free ThingSpeak accounts, 
                     //the minimum time interval between updates 
                     //(writes to a channel) is 15 seconds. 
 
