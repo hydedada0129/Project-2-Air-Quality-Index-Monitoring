@@ -1,14 +1,14 @@
 #include "MQ135.h"
 #include <ESP8266WiFi.h>
 
-String apiKey = "F61CWMAHKXN172BR";  //this key from ThingSpeak "Write API key"
+String apiKey = "";  //this key from ThingSpeak "Write API key"
 WiFiClient client;
 
 int sensorValue;
 int digitalValue;
 
-const char* ssid = "newapartner_newchild_2.4G";
-const char* password = "52822689";
+const char* ssid = "";
+const char* password = "";
 const char* server = "api.thingspeak.com";
 
 void setup() {
