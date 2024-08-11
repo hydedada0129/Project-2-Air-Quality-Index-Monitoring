@@ -1,0 +1,35 @@
+#include "MQ135.h"
+
+// this code works
+//TODO: add air quality sensor function
+
+#include <ESP8266WiFi.h>
+
+const char* ssid = "newapartner_newchild_2.4G";
+const char* password = "52822689";
+
+void setup() {
+  Serial.begin(115200); //set nodemcu baudrate 
+  delay(10);
+
+// Connect to WiFi network
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print("NodeMCU is trying...still attempt connecting...\n");  //if does not establish connection, will loop
+  }
+
+  Serial.println("");
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP()); //will see nodeMCU IP address
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
