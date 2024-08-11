@@ -63,7 +63,7 @@ void loop() {
   client.stop();
   Serial.println("Waiting...");
 
-  delay(15000);     //For free ThingSpeak accounts, 
+  delay(600000);     //For free ThingSpeak accounts, 
                     //the minimum time interval between updates 
                     //(writes to a channel) is 15 seconds. 
 
