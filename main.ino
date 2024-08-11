@@ -1,7 +1,7 @@
 #include "MQ135.h"
 #include <ESP8266WiFi.h>
 
-String apiKey = "EHFRJYYWLCZ265OY";  //this key from ThingSpeak "Write API key"
+String apiKey = "F61CWMAHKXN172BR";  //this key from ThingSpeak "Write API key"
 WiFiClient client;
 
 int sensorValue;
